@@ -37,3 +37,13 @@ export default activity.props({
     },
 });
 ```
+
+The return value of onTask will be used as the input for the next task.
+Usually we return the location of a file on s3, for the next activity in
+the workflow to use as input.
+
+You should split out the functionality of your integration into smaller pieces,
+existing as other methods on your integration.  Everything works best if these
+functions are pure and operate purely on their inputs and return some output
+that can be tested for in your tests.  The main onTask function should just
+be the glue for everything else.
