@@ -26,6 +26,8 @@ Your integration should be the default export of the module, and should be creat
 using the exported `activity` object from `aries`, like so:
 
 ```
+import { activity } from 'astronomer-aries';
+
 export default activity.props({
     config: {
         name: 'activity-name',
