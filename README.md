@@ -25,6 +25,8 @@ Most objects exported from `aries` are usually stampit factories.
 Your integration should be the default export of the module, and should be created
 using the exported `activity` object from `aries`, like so:
 
+You can use any npm modules you want, just be sure to `--save` when you `npm install`.
+
 ```
 import { activity } from 'astronomer-aries';
 
