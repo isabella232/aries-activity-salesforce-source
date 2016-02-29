@@ -25,7 +25,8 @@ Most objects exported from `aries` are usually stampit factories.
 Your integration should be the default export of the module, and should be created
 using the exported `activity` object from `aries`, like so:
 
-`export default activity.props({
+```
+export default activity.props({
     config: {
         name: 'activity-name',
         version: 'activity-version',
@@ -35,3 +36,4 @@ using the exported `activity` object from `aries`, like so:
         // Your code here.
     },
 });
+```
