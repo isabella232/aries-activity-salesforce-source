@@ -22,10 +22,10 @@ Your integration code should live in lib/index.js.
 Under the hood, `aries` uses [stampit](https://github.com/stampit-org/stampit) to compose objects.
 Most objects exported from `aries` are usually stampit factories.
 
+You can use any npm modules you want, just be sure to `--save` when you `npm install`.
+
 Your integration should be the default export of the module, and should be created
 using the exported `activity` object from `aries`, like so:
-
-You can use any npm modules you want, just be sure to `--save` when you `npm install`.
 
 ```
 import { activity } from 'astronomer-aries';
@@ -42,8 +42,15 @@ export default activity.props({
 });
 ```
 
+The first parameter provided to onTask will be an activityTask, which is the result of an activity poll from (amazon swf)[http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dg-intro-to-swf.html].
+
+The second parameter provided will be a config object which, in production will come from the configuration users can enter in our web application.  For tests, you mock up whatever input you need to work with the API, and manually pass it to 
+onTask.
+
+The third parameter will be the date this activity last ran.
+
 The return value of onTask will be used as the input for the next task.
-Usually we return the location of a file on s3, for the next activity in
+Usually we upload a file to s3, and return the location of that file for the next activity in
 the workflow to use as input.
 
 You should split out the functionality of your integration into smaller pieces,
