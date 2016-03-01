@@ -42,7 +42,7 @@ export default activity.props({
 });
 ```
 
-The first parameter provided to onTask will be an activityTask, which is the result of an activity poll from (amazon swf)[http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dg-intro-to-swf.html].
+The first parameter provided to onTask will be an activityTask, which is the result of an activity poll from [amazon swf](http://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dg-intro-to-swf.html).
 
 The second parameter provided will be a config object which, in production will come from the configuration users can enter in our web application.  For tests, you mock up whatever input you need to work with the API, and manually pass it to 
 onTask.
