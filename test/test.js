@@ -6,8 +6,8 @@ import moment from 'moment';
 
 function getTestConfig() {
 	return {
-		user: 'julianlaneve@icloud.com',
-		pass: 'Astronomer2016!' + 'wwQYTUAvCMdly88twvfMR4HF'
+		user: "email_here",
+		pass: 'password' + 'security_token'
 	}
 }
 
@@ -23,8 +23,7 @@ test('proper configuration', t => {
 test('api request', t => async function()  {
 	const activity = new SalesforceSource();
 	const config = getTestConfig();
-	const pass = 'Astronomer2016!' + 'wwQYTUAvCMdly88twvfMR4HF';
-	const result = await activity.request("julianlaneve@icloud.com", pass, 'SELECT Id, Name FROM Account');
+	const result = await activity.request(config.user, config.pass, 'SELECT Id, Name FROM Account');
 	fs.writeFile('log/log.txt', "Result: " + JSON.stringify(result) + '\n');
 	t.ok(result);
 }());
