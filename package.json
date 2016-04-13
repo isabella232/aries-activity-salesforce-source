@@ -20,7 +20,7 @@
     "nock": "^7.0.2"
   },
   "dependencies": {
-    "astronomer-aries": "astronomerio/aries",
+    "aries-data": "aries-data/aries-data",
     "aws-sdk": "^2.2.33",
     "jsforce": "^1.6.0",
     "moment": "^2.11.2",
