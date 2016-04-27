@@ -4,5 +4,7 @@ An aries activity to query the salesforce database using the [Salesforce Object 
 
 ### Config Format
 config.username = email provided to salesforce
+
 config.password = password + security token (ex. passwordABCDEFGH)
+
 config.query = query written in Salesforce Object Query Language
