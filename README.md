@@ -22,6 +22,10 @@ The query to be run on the salesforce database (must be in [SOQL](https://develo
 ```javascript
 "query": "SELECT Id, Name FROM Account"
 ```
+Note: SOQL does not support `SELECT *`, but you can use this integrations custom `SELECT_ALL`. Example:
+```javascript
+"query": "SELECT_ALL FROM Account"
+```
 
 ###Example Config
 ```javascript
