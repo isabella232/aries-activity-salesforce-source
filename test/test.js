@@ -1,13 +1,13 @@
 import test from 'blue-tape';
-import fs from 'fs';
 import nock from 'nock';
 import SalesforceSource from '..';
-import moment from 'moment';
+import { ActivityTester } from 'aries-data';
 
 function getTestConfig() {
     return {
-        user: "user/email",
-        pass: 'password' + 'security_token'
+        username: "username/email",
+        password: 'password' + 'security token',
+        query: 'SELECT_ALL FROM Account'
     }
 }
 
@@ -21,9 +21,13 @@ test('proper configuration', t => {
 
 
 test('api request', t => async function() {
-    const activity = new SalesforceSource();
+    const tester = new ActivityTester(SalesforceSource);
+
+    const task = {};
     const config = getTestConfig();
-    const result = await activity.request(config.user, config.pass, 'SELECT_ALL FROM Account');
-    fs.writeFile('log/log.txt', "Result: " + JSON.stringify(result) + '\n');
+
+    tester.testS3StreamOutput('test/output', t.equals);
+    const result = await tester.onTask(task, config);
+
     t.ok(result);
 }());
