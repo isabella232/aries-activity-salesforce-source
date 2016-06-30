@@ -8,7 +8,7 @@ This is an integration for [Salesforce](https://www.salesforce.com).
 ###Username
 The username used for authentication on the database.
 ```javascript
-"user": "root",
+"username": "root",
 ```
 
 ###Password
@@ -30,7 +30,7 @@ Note: SOQL does not support `SELECT *`, but you can use this integrations custom
 ###Example Config
 ```javascript
 {
-    user: 'root',
+    username: 'root',
     password: 'veryinsecure' + 'security_token',
     query: 'SELECT Id, Name FROM Account'
 }
