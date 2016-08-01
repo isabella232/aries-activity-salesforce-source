@@ -1,5 +1,5 @@
 {
     "extends": "airbnb",
+    "parser" : "babel-eslint",
     "indent": 4,
-    "plugins": ["babel"],
 }
