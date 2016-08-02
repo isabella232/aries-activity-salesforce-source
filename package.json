@@ -29,7 +29,7 @@
   "dependencies": {
     "aries-data": "aries-data/aries-data",
     "aws-sdk": "^2.2.33",
-    "jsforce": "^1.6.0",
+    "jsforce": "^1.7.0",
     "lodash": "^4.14.1",
     "moment": "^2.11.2",
     "promisify": "0.0.3",
