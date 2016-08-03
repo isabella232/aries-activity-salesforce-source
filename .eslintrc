@@ -1,5 +1,7 @@
 {
     "extends": "airbnb",
     "parser" : "babel-eslint",
-    "indent": 4,
+    "rules" : {
+        "indent": [2, 4]
+    }
 }
