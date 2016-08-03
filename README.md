@@ -16,23 +16,24 @@ The password, combined with the security token, associated with the user.
 ```javascript
 "password": "veryinsecure" + "security_token",
 ```
+###resourceName
+The name of the SalesForce resource to query.
 
-###Query
-The query to be run on the salesforce database (must be in [SOQL](https://developer.salesforce.com/docs/atlas.en-us.soql_sosl.meta/soql_sosl/)).
-```javascript
-"query": "SELECT Id, Name FROM Account"
-```
-Note: SOQL does not support `SELECT *`, but you can use this integrations custom `SELECT_ALL`. This method currently only supports querying one object. Example:
-```javascript
-"query": "SELECT_ALL FROM Account"
-```
+###Inclusion Fields
+The fields to include in the results. If null or empty, all fields will be included
+
+###Exclusion Fields
+The fields to ignore. Ok to be undefined or null. 
+
 
 ###Example Config
 ```javascript
 {
     username: 'root',
     password: 'veryinsecure' + 'security_token',
-    query: 'SELECT Id, Name FROM Account'
+    resourceName: 'Campaign',
+    inclusionFields: [],
+    exclusionFields: ['BillingAddress']
 }
 ```
 
