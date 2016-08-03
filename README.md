@@ -39,11 +39,7 @@ The fields to ignore. Ok to be undefined or null.
 
 ##Reponse
 The response is the results expected, in JSON format. Example:
-```javascript
-{  
-   "totalSize":12,
-   "done":true,
-   "records":[  
+```javascript 
       {  
          "attributes":{  
             "type":"Account",
@@ -140,6 +136,4 @@ The response is the results expected, in JSON format. Example:
          "Id":"0013600000LVqLdAAL",
          "Name":"sForce"
       }
-   ]
-}
 ```
