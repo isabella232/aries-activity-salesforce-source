@@ -8,7 +8,7 @@ function getTestConfig() {
     return {
         username: 'username/email',
         password: 'password security token',
-        resourceName: 'Campaign',
+        table: 'Campaign',
         inclusionFields: [],
         exclusionFields: [],
     };

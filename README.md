@@ -16,8 +16,8 @@ The password, combined with the security token, associated with the user.
 ```javascript
 "password": "veryinsecure" + "security_token",
 ```
-###resourceName
-The name of the SalesForce resource to query.
+###table
+The name of the SalesForce table to query.
 
 ###Inclusion Fields
 The fields to include in the results. If null or empty, all fields will be included
@@ -31,7 +31,7 @@ The fields to ignore. Ok to be undefined or null.
 {
     username: 'root',
     password: 'veryinsecure' + 'security_token',
-    resourceName: 'Campaign',
+    table: 'Campaign',
     inclusionFields: [],
     exclusionFields: ['BillingAddress']
 }
