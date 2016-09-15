@@ -37,7 +37,7 @@ The fields to ignore. Ok to be undefined or null.
 }
 ```
 
-##Reponse
+##Response
 The response is the results expected, in JSON format. Example:
 ```javascript 
       {  
