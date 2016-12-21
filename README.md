@@ -1,3 +1,5 @@
+![alt text](/img/logo.png "Aries Integration for Salesforce")
+
 #Aries Integration for Salesforce
 
 This is an integration for [Salesforce](https://www.salesforce.com).
