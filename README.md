@@ -139,3 +139,6 @@ The response is the results expected, in JSON format. Example:
          "Name":"sForce"
       }
 ```
+
+## License
+MIT
