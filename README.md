@@ -2,6 +2,8 @@
 
 #Aries Integration for Salesforce
 
+[![CircleCI](https://circleci.com/gh/aries-data/aries-activity-salesforce-source.svg?style=svg)](https://circleci.com/gh/aries-data/aries-activity-salesforce-source)
+
 This is an integration for [Salesforce](https://www.salesforce.com).
 
 
