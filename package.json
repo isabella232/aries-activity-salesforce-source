@@ -4,7 +4,15 @@
   "description": "",
   "main": "lib/index.js",
   "scripts": {
-    "test": "babel-node test/test.js | faucet"
+      "test": "mocha --require babel-polyfill --compilers js:babel-register",
+      "test-watch": "mocha -w --require babel-polyfill --compilers js:babel-register",
+      "coverage": "babel-node ./node_modules/.bin/isparta cover _mocha",
+      "clean": "rm -rf dist",
+      "tail": "tail -f app.log | bunyan -o short",
+      "build-src": "npm run clean && babel lib -d dist",
+      "build-image": "docker build -t astronomerio/salesforce-source .",
+      "build": "npm run build-src",
+      "lint": "eslint lib"
   },
   "author": "JulianLaNeve",
   "license": "ISC",
