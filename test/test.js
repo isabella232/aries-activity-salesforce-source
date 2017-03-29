@@ -1,4 +1,3 @@
-//import test from 'blue-tape';
 import { assert } from 'chai';
 import SalesforceSource from '../lib';
 import pkgJson from '../package.json';
@@ -6,7 +5,9 @@ import nock from 'nock';
 
 describe('SalesforceSource', () => {
     describe('#getBlah', () => {
-
+        it('tests blah', () => {
+            
+        });
     });
 });
 
