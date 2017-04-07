@@ -3,18 +3,25 @@ import SalesforceSource from '../lib';
 import pkgJson from '../package.json';
 import jsforce from 'jsforce';
 import nock from 'nock';
+import config from './test-config.json'
 
 describe('SalesforceSource', () => {
-    describe('#getBulk', () => {
-        it('tests bulk query', () => {
-            config = new './test-config';
+    describe('#getQuery', () => {
+        it('tests config exists in query', () => {
+            const source = new SalesforceSource;
             if(config.hasOwnProperty("query")){
                 console.log(config);
-                console.log(config("query"));
+                console.log(config.query);
             }
-
         });
     });
+
+    // describe('#getConfig', () => {
+    //     it('tests connection', () => {
+    //         const conn = new jsforce.Connection();
+    //
+    //     });
+    // });
 });
 
 // function getTestConfig() {
