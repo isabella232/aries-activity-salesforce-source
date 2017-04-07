@@ -3,7 +3,10 @@ import SalesforceSource from '../lib';
 import pkgJson from '../package.json';
 import jsforce from 'jsforce';
 import nock from 'nock';
+import * as fixtures from './fixtures';
 import config from './test-config.json'
+
+const URL = `https://astronomer.lightning.force.com/one/one.app`
 
 describe('SalesforceSource', () => {
     describe('#getQuery', () => {
@@ -16,26 +19,17 @@ describe('SalesforceSource', () => {
         });
     });
 
-    // describe('#getConfig', () => {
-    //     it('tests connection', () => {
-    //         const conn = new jsforce.Connection();
-    //
-    //     });
-    // });
-});
+    describe('#getResponse', () => {
+        before(function(){
+            nock(URL)
+            .get(URL)
+            .reply('200', fixtures.response);
+        });
+        it('tests response', () => {
+            const source = new SalesforceSource;
+            // const data = await index.Query.fields;
+            // assert.ok(data);
 
-// function getTestConfig() {
-//     return {
-//         username: 'username/email',
-//         password: 'password security token',
-//         table: 'Campaign',
-//         inclusionFields: [],
-//         exclusionFields: [],
-//     };
-// }
-//
-// test('proper configuration', t => {
-//     t.equal(SalesforceSource.props.name, pkgJson.name);
-//     t.equal(SalesforceSource.props.version, pkgJson.version);
-//     t.end();
-// });
+        });
+    });
+});
