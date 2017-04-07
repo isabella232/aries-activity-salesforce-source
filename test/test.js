@@ -1,12 +1,18 @@
 import { assert } from 'chai';
 import SalesforceSource from '../lib';
 import pkgJson from '../package.json';
+import jsforce from 'jsforce';
 import nock from 'nock';
 
 describe('SalesforceSource', () => {
-    describe('#getBlah', () => {
-        it('tests blah', () => {
-            
+    describe('#getBulk', () => {
+        it('tests bulk query', () => {
+            config = new './test-config';
+            if(config.hasOwnProperty("query")){
+                console.log(config);
+                console.log(config("query"));
+            }
+
         });
     });
 });
