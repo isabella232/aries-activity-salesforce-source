@@ -1,8 +1,0 @@
-{
-    "username": "root",
-    "password": "veryinsecure + security_token",
-    "table": "Campaign",
-    "inclusionFields": [],
-    "exclusionFields": ["BillingAddress"],
-    "query": "SELECT * FROM TABLE;"
-}
