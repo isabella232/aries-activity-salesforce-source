@@ -4,15 +4,16 @@
   "description": "",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha --require babel-polyfill --compilers js:babel-register",
-    "test-watch": "mocha -w --require babel-polyfill --compilers js:babel-register",
-    "coverage": "babel-node ./node_modules/.bin/isparta cover _mocha",
-    "clean": "rm -rf dist",
+     "test": "mocha --require babel-polyfill --compilers js:babel-register",
+     "test-watch": "mocha -w --require babel-polyfill --compilers js:babel-register",
+     "coverage": "babel-node ./node_modules/.bin/isparta cover _mocha",
+     "lint": "eslint lib",
     "tail": "tail -f app.log | bunyan -o short",
     "build-src": "npm run clean && babel lib -d dist",
     "build-image": "docker build -t astronomerio/salesforce-source .",
     "build": "npm run build-src",
-    "lint": "eslint lib"
+    "docker-coverage": "docker run --entrypoint npm astronomerio/salesforce-source run coverage",
+    "docker-lint": "docker run --entrypoint npm astronomerio/salesforce-source run lint"
   },
   "author": "DanSweet",
   "license": "ISC",
