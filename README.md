@@ -20,6 +20,9 @@ The password, combined with the security token, associated with the user.
 ```javascript
 "password": "veryinsecure" + "security_token",
 ```
+###query
+This option overrides table, inclusion, and exclusion fields.  This runs a raw SOQL query.
+
 ###table
 The name of the SalesForce table to query.
 
@@ -29,6 +32,9 @@ The fields to include in the results. If null or empty, all fields will be inclu
 ###Exclusion Fields
 The fields to ignore. Ok to be undefined or null. 
 
+###Max Fetch
+Maximum number of records to fetch.
+
 
 ###Example Config
 ```javascript
@@ -37,7 +43,8 @@ The fields to ignore. Ok to be undefined or null.
     password: 'veryinsecure' + 'security_token',
     table: 'Campaign',
     inclusionFields: [],
-    exclusionFields: ['BillingAddress']
+    exclusionFields: ['BillingAddress'],
+    maxFetch: 10000
 }
 ```
 

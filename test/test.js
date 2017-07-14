@@ -1,7 +1,6 @@
 import { assert } from 'chai';
 import sinon from 'sinon';
 import SalesforceSource from '../lib';
-import config from './test-config.js';
 import * as fixtures from './fixtures'
 
 describe('SalesforceSource', () => {
@@ -39,17 +38,4 @@ describe('SalesforceSource', () => {
             assert.deepEqual(actual, expected);
         });
     });
-    // it('returns query data', async function () {
-    //     this.timeout(50000);
-    //     const source = new SalesforceSource();
-    //     const connectionConfig = {
-    //         query: 'SELECT GA_Campaign_Name__c, GA_Medium__c, GA_Source__c, LeadSource, CloseDate, CreatedDate, StageName, RecordTypeId, X18_Character_Opportunity_ID__c FROM Opportunity',
-    //         connection: {
-    //             "username" : config.username,
-    //             "password" : config.password,
-    //             "securityToken" : config.securityToken
-    //         }
-    //     };
-    //     const result = await source.onTask({}, config);
-    // });
 });
