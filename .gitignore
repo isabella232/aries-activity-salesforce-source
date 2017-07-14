@@ -1,3 +1,6 @@
 node_modules
 app.log
 npm-debug.log
+coverage
+.env
+.DS_Store
