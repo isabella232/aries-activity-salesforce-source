@@ -39,14 +39,8 @@
   },
   "dependencies": {
     "aries-data": "^2.1.1",
-    "aws-sdk": "^2.2.33",
-    "dotenv": "^4.0.0",
-    "highland": "^2.10.5",
     "jsforce": "^1.7.0",
     "lodash": "^4.14.1",
-    "moment": "^2.11.2",
-    "promisify": "0.0.3",
-    "thenify-all": "^1.6.0",
-    "uuid": "^2.0.1"
+    "thenify-all": "^1.6.0"
   }
 }
