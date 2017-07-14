@@ -1,42 +1,42 @@
 ![alt text](/img/logo.png "Aries Integration for Salesforce")
 
-#Aries Integration for Salesforce
+# Aries Integration for Salesforce
 
 [![CircleCI](https://circleci.com/gh/aries-data/aries-activity-salesforce-source.svg?style=svg)](https://circleci.com/gh/aries-data/aries-activity-salesforce-source)
 
 This is an integration for [Salesforce](https://www.salesforce.com).
 
 
-##Configuration
+## Configuration
 
-###Username
+### Username
 The username used for authentication on the database.
 ```javascript
 "username": "root",
 ```
 
-###Password
+### Password
 The password, combined with the security token, associated with the user.
 ```javascript
 "password": "veryinsecure" + "security_token",
 ```
-###query
+### Query
 This option overrides table, inclusion, and exclusion fields.  This runs a raw SOQL query.
 
-###table
+### Table
 The name of the SalesForce table to query.
 
-###Inclusion Fields
+### Inclusion Fields
 The fields to include in the results. If null or empty, all fields will be included
 
-###Exclusion Fields
+### Exclusion Fields
 The fields to ignore. Ok to be undefined or null. 
 
-###Max Fetch
+### Max Fetch
 Maximum number of records to fetch.
 
 
-###Example Config
+### Example Config
 ```javascript
 {
     username: 'root',
@@ -48,7 +48,7 @@ Maximum number of records to fetch.
 }
 ```
 
-##Response
+## Response
 The response is the results expected, in JSON format. Example:
 ```javascript 
       {  
