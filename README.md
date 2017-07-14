@@ -6,7 +6,6 @@
 
 This is an integration for [Salesforce](https://www.salesforce.com).
 
-
 ## Configuration
 
 ### Username
@@ -20,6 +19,7 @@ The password, combined with the security token, associated with the user.
 ```javascript
 "password": "veryinsecure" + "security_token",
 ```
+
 ### Query
 This option overrides table, inclusion, and exclusion fields.  This runs a raw SOQL query.
 
@@ -35,7 +35,6 @@ The fields to ignore. Ok to be undefined or null.
 ### Max Fetch
 Maximum number of records to fetch.
 
-
 ### Example Config
 ```javascript
 {
@@ -50,6 +49,7 @@ Maximum number of records to fetch.
 
 ## Response
 The response is the results expected, in JSON format. Example:
+
 ```javascript 
       {  
          "attributes":{  
