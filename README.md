@@ -9,31 +9,28 @@ This is an integration for [Salesforce](https://www.salesforce.com).
 ## Configuration
 
 ### Username
-The username used for authentication on the database.
-```javascript
-"username": "root",
-```
+`"username" : "root"` - The username used for authentication on the database.
 
 ### Password
-The password, combined with the security token, associated with the user.
-```javascript
-"password": "veryinsecure" + "security_token",
-```
+`"password" : "veryinsecure"` - The password associated with the user.
+
+### Security Token
+`"securityToken" : "verysecuretoken"` - The security token associated with the user.
 
 ### Query
-This option overrides table, inclusion, and exclusion fields.  This runs a raw SOQL query.
+`"query" : "SELECT Id, Name, BillingCity FROM Account"` - This option overrides table, inclusion, and exclusion fields.  This runs a raw SOQL query.
 
 ### Table
-The name of the SalesForce table to query.
+`"table" : "accounts"` - The name of the SalesForce table to query.
 
 ### Inclusion Fields
-The fields to include in the results. If null or empty, all fields will be included
+`"inclusionFields" : []` - The fields to include in the results. If null or empty, all fields will be included
 
 ### Exclusion Fields
-The fields to ignore. Ok to be undefined or null. 
+`"exclusionFields" : []` - The fields to ignore. If null or empty, no fields will be excluded.
 
 ### Max Fetch
-Maximum number of records to fetch.
+`"maxFetch" : 10000` - Maximum number of records to fetch. By default this is set to 10000.
 
 ### Example Config
 ```javascript
@@ -50,7 +47,7 @@ Maximum number of records to fetch.
 ## Response
 The response is the results expected, in JSON format. Example:
 
-```javascript 
+```javascript
       {  
          "attributes":{  
             "type":"Account",
