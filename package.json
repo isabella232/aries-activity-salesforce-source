@@ -15,8 +15,8 @@
     "docker-coverage": "docker run --entrypoint npm astronomerio/salesforce-source run coverage",
     "docker-lint": "docker run --entrypoint npm astronomerio/salesforce-source run lint"
   },
-  "author": "DanSweet",
-  "license": "ISC",
+  "author": "Astronomer Inc <aries@astronomer.io>",
+  "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.5.1",
     "babel-core": "^6.5.1",
