@@ -38,7 +38,7 @@
     "sinon": "^2.1.0"
   },
   "dependencies": {
-    "aries-data": "^2.1.1",
+    "ariesjs": "aries-data/ariesjs",
     "avsc": "^5.0.5",
     "highland": "^3.0.0-beta.5",
     "jsforce": "^1.7.0",
