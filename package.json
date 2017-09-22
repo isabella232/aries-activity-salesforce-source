@@ -1,6 +1,6 @@
 {
   "name": "aries-activity-salesforce-source",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
@@ -15,8 +15,8 @@
     "docker-coverage": "docker run --entrypoint npm astronomerio/salesforce-source run coverage",
     "docker-lint": "docker run --entrypoint npm astronomerio/salesforce-source run lint"
   },
-  "author": "DanSweet",
-  "license": "ISC",
+  "author": "Astronomer Inc <aries@astronomer.io>",
+  "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.5.1",
     "babel-core": "^6.5.1",
@@ -38,9 +38,20 @@
     "sinon": "^2.1.0"
   },
   "dependencies": {
-    "aries-data": "^2.1.1",
+    "ariesjs": "aries-data/ariesjs",
+    "avsc": "^5.0.5",
+    "highland": "^3.0.0-beta.5",
     "jsforce": "^1.7.0",
     "lodash": "^4.14.1",
-    "thenify-all": "^1.6.0"
+    "lodash.defaults": "^4.2.0",
+    "lodash.get": "^4.4.2",
+    "lodash.mapkeys": "^4.6.0",
+    "lodash.snakecase": "^4.1.1",
+    "moment": "^2.18.1",
+    "promise-throttle": "^0.3.1",
+    "request-promise-native": "^1.0.4",
+    "retry": "^0.10.1",
+    "thenify-all": "^1.6.0",
+    "xml2js": "^0.4.19"
   }
 }
